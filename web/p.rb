@@ -17,7 +17,7 @@ browser.each do |browser|
 		driver = Selenium::WebDriver.for :opera
 	end
 	driver.navigate.to "http://lsng.livestation.com/"
-	driver.find_element(:id, "btn-intro-login").click
+	driver.click_on(:id, "btn-intro-login")
 	driver.click_on(:id, "btn-modal-login-email")
 	fill_in("login_email_input", {:with => username})
 	fill_in("login_password_input", {:with => password})
