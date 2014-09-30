@@ -20,9 +20,9 @@ describe('lsng home', function() {
 	});
 
 	it('should be able to see the BBC World News station', function() {
-		var bbc = element(by.css('.feed_title'));
+		var bbc = element.all(by.css('.feed_text_holder')).get(1);
 
-		expect(bbc.getText()).toEqual('Watch BBC WorldNews');
+		expect(bbc.getText()).toEqual("Watch BBC WorldNews\nby Bbc-world\nLIVE");
 	});
 
 
@@ -56,7 +56,13 @@ describe('lsng home', function() {
 	});
 
 	it('should be able to click on the BBC button and go to the BBC page', function() {
-		browser.driver.findElement(by.xpath('/html/body/div/div/div[2]/div/div/div[4]/div/div[3]')).click();
+		//browser.driver.findElement(by.css('.feed_img')).get(2).click();
+		var bbc = element.all(by.css('.feed_text_holder')).get(1);
+
+		bbc.click();
+
+		expect(browser.getCurrentUrl()).toEqual('hhttp://lsng.livestation.com/#/content/eea014ce-25e2-4090-af51-bddf446b2e04');
+
 		var feeds = element.all(by.repeater('feed in feeds'));
 
 		feeds.first().then(function(elm){
@@ -71,8 +77,9 @@ describe('lsng home', function() {
 
 		var intro = element(by.css('.tagline'));
 
+		browser.driver.manage().window().maximize()
 		avatar.click();
-		browser.sleep(1000);
+		//browser.sleep(1000);
 		logout.click();
 		expect(browser.getCurrentUrl()).toEqual('http://lsng.livestation.com/#/intro');
 	});

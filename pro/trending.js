@@ -28,7 +28,12 @@ describe('trending page', function() {
 
 	it('should be able to go to the BBC station page by clicking on the icon', function() {
 		//element.all(by.css('.itembgratio .ratio-content')).get(1).click();
-		browser.driver.findElement(by.xpath('//*[@id="trends-container"]/div[2]/span/span/div/div[1]/a/div/div[1]/div')).click();
+		//browser.driver.findElement(by.xpath('//*[@id="trends-container"]/div[2]/span/span/div/div[1]/a/div/div[1]/div')).click();
+
+		var bbc = element.all(by.css('.feed_text_holder')).get(1);
+
+		bbc.click();
+
 		var name = browser.driver.findElement(by.xpath('//*[@id="content_detail"]/div[2]/div[1]'));
 
 		//expect(browser.getCurrentUrl()).toEqual('http://lsng.livestation.com/#/content/eea014ce-25e2-4090-af51-bddf446b2e04');
