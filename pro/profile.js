@@ -31,32 +31,49 @@ describe('user profile', function() {
 
 	it('should be able to go to followers list', function() {
 		var followers = element(by.css('[ng-click="followingTab(false)"]'));
-		var name = element.all(by.binding('username')).get(1);
+		//var name = element.all(by.binding('username')).get(1);
 
 		followers.click();
 
-		
+		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[3]/div[1]/div/div[1]/div[1]')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('Paul_livestation');               
+                console.log("Expected text is: " + promise); 
+            });
 
 		//expect(name.getText()).toEqual('Paul_livestation');
 		//expect(browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[3]/div[1]/div/div[1]/div[1]')).getText()).toEqual('Paul_livestation');
 	});
 
 	it('should be able to go to likes list', function() {
-		var likes = element(by.id('btn sp_menu_btn'));
-		var name = element.all(by.binding('feed_title ng-binding'));
+		//var likes = element(by.id('sp_like'));
+		var likes = browser.driver.findElement(by.xpath('//*[@id="sp_like"]'));
+		//var name = element.all(by.binding('feed_title ng-binding'));
 
 		likes.click();
 
-		expect(name.getText()).toEqual('Watch BBC WorldNews');
+		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div/a/div/div[1]')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('Watch BBC WorldNews');               
+                console.log("Expected text is: " + promise); 
+            });
+
+		//expect(name.getText()).toEqual('Watch BBC WorldNews');
 	});
 
 	it('should be able to go to broadcast list', function() {
 		var broadcast = element(by.id('sp_broadcast'));
-		var name = element.all(by.binding('feed_title ng-binding'));
+		//var name = element.all(by.binding('feed_title ng-binding'));
 
 		broadcast.click();
 
-		expect(name.getText()).toEqual('Police at work');
+		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div/a/div/div[1]')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('New batteries');               
+                console.log("Expected text is: " + promise); 
+            });
+
+		//expect(name.getText()).toEqual('Police at work');
 	});
 
 	it('should be able to logout of the website', function() {
