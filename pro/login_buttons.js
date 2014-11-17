@@ -1,7 +1,7 @@
 describe('login buttons', function() {
 
   it('should be able to show the join now box', function() {
-    browser.get('http://lsng.livestation.com'); 
+    browser.get('http://staging-lsng.livestation.com/'); 
 
     var join = element(by.id('btn-intro-join-now'));
     var title = element(by.css('.modal h1'));
@@ -20,7 +20,7 @@ describe('login buttons', function() {
   });
 
   it('should be able to close the login box to go back to the home page', function() {
-    browser.get('http://lsng.livestation.com'); 
+    browser.get('http://staging-lsng.livestation.com/'); 
 
     var login = element(by.css('.btn_intro_login'));
 
@@ -34,7 +34,7 @@ describe('login buttons', function() {
   });
 
    it('should be able to close the login box, after going to the email login box. It should then to go back to the home page', function() {
-    browser.get('http://lsng.livestation.com'); 
+    browser.get('http://staging-lsng.livestation.com/'); 
 
     var login = element(by.css('.btn_intro_login'));
     var emailLogin = element(by.id('btn-modal-login-email'));

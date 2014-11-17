@@ -1,7 +1,7 @@
 describe('flaging', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://lsng.livestation.com'); 
+		browser.get('http://staging-lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -12,17 +12,16 @@ describe('flaging', function() {
 
 		login.click();
 		emailLogin.click();
-		username.sendKeys('quang.chau');
+		username.sendKeys('quangchau');
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back Quang.chau');
+		expect(welcome.getText()).toEqual('Welcome back qaangchau');
 	});
 
 	it('should be able to go to the timer test', function() {
-		browser.get('http://lsng.livestation.com/#/content/71194604-2e3c-436b-8a93-f5294ae91a8b'); 
+		browser.get('http://staging-lsng.livestation.com/#/content/71194604-2e3c-436b-8a93-f5294ae91a8b'); 
 
-		expect(browser.getCurrentUrl()).toEqual('http://lsng.livestation.com/#/content/71194604-2e3c-436b-8a93-f5294ae91a8b');
 	});
 
 
@@ -60,6 +59,18 @@ describe('flaging', function() {
 		//var yes = element(by.id('btn btn-primary btn-small pull-right'));
 		var yes = browser.driver.findElement(by.xpath('//*[@id="comment.id"]/div/div/div[3]/button[2]'))
 		yes.click();
+	});
+
+	it('should be able to logout of the website', function() {
+		browser.get('http://staging-lsng.livestation.com/'); 
+		var avatar = element(by.id('top_menu_avatar'));
+		var logout = element(by.id('top-drop-logout'));
+
+		var intro = element(by.css('.tagline'));
+
+		avatar.click();
+		logout.click();
+		expect(intro.getText()).toEqual('Be There Now');
 	});
 
 });

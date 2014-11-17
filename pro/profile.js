@@ -1,7 +1,7 @@
 describe('user profile', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://lsng.livestation.com'); 
+		browser.get('http://staging-lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -12,21 +12,24 @@ describe('user profile', function() {
 
 		login.click();
 		emailLogin.click();
-		username.sendKeys('quang.chau');
+		username.sendKeys('quangchau');
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back Quang.chau');
+		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		browser.driver.manage().window().maximize()
 	});
 
 	it('should be able to go to the user profile', function() {
-		var avatar = element(by.id('top_menu_avatar'));
+		//var avatar = element(by.id('top_menu_avatar'));
+		var avatar = browser.driver.findElement(by.xpath('//*[@id="top_menu_avatar"]/img'))
 		var profile = element(by.id('top-drop-my-profile'));
 
+		browser.driver.manage().window().maximize();
 		avatar.click();
 		profile.click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://lsng.livestation.com/#/myprofile');
+		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/profile');
 	});
 
 	it('should be able to go to followers list', function() {
@@ -74,6 +77,36 @@ describe('user profile', function() {
             });
 
 		//expect(name.getText()).toEqual('Police at work');
+	});
+
+	it('should be able to go to the user profile bio', function() {
+		var next = element(by.id('select-next-profile-overlay'));
+
+		next.click();
+
+		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[1]/div/div/div[3]')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('Appium test');               
+                console.log("Expected text is: " + promise); 
+            });
+	});
+
+	it('should be able to see the user profile settings', function() {
+		var settings = element(by.id('profile-settings-icon'));
+
+		settings.click();
+
+		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[1]/div/div[2]/div/div[1]/div')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('MANAGE\nSUBSCRIPTIONS');               
+                console.log("Expected text is: " + promise); 
+            });
+
+		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[1]/div/div[2]/div/div[2]/div')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('MANAGE\nNOTIFICATIONS');               
+                console.log("Expected text is: " + promise); 
+            });
 	});
 
 	it('should be able to logout of the website', function() {

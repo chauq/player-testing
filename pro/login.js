@@ -1,4 +1,4 @@
-browser.get('http://lsng.livestation.com'); 
+browser.get('http://staging-lsng.livestation.com/'); 
 
 var loginBtn = element(by.css('.btn_intro_login'));
 var emailLogin = element(by.id('btn-modal-login-email'));
@@ -8,6 +8,6 @@ var done = element(by.id('btn-modal-login-email-done'));
 
 loginBtn.click();
 emailLogin.click();
-usernameFd.sendKeys('quang.chau');
+usernameFd.sendKeys('quangchau');
 passwordFd.sendKeys('1');
 done.click();

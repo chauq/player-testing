@@ -1,7 +1,7 @@
 describe('Video page', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://lsng.livestation.com'); 
+		browser.get('http://staging-lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -12,41 +12,41 @@ describe('Video page', function() {
 
 		login.click();
 		emailLogin.click();
-		username.sendKeys('quang.chau');
+		username.sendKeys('quangchau');
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back Quang.chau');
+		expect(welcome.getText()).toEqual('Welcome back quangchau');
 	});
 
 	it('should be able to go to the test station page by going to a link', function() {
-		browser.get('http://lsng.livestation.com/#/content/d5d0fac3-7398-43cf-87b0-225347ca8345');
+		browser.get('http://staging-lsng.livestation.com/#/station/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
 
-		expect(browser.getCurrentUrl()).toEqual('http://lsng.livestation.com/#/content/d5d0fac3-7398-43cf-87b0-225347ca8345');
+		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/station/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
 	});
 
 	it('should be able to see the title of the video', function() {
 		var title = element(by.css('.feed_title'));
 
-		expect(title.getText()).toEqual('Proteus Core Take Two');
+		expect(title.getText()).toEqual('Timer test');
 	});
 
 	it('should be able to see the location of the video', function() {
 		var location = browser.driver.findElement(by.xpath('//*[@id="content_detail"]/div[2]/div[2]/span[2]'));
 
-		expect(location.getText()).toEqual('• Auckland, New Zealand');
+		expect(location.getText()).toEqual('• Hoxton, London, United Kingdom');
 	});
 
 	it('should be able to see the commentor of the video', function() {
 		var commentor = element(by.binding('commentor'));
 
-		expect(commentor.getText()).toEqual('tomekn');
+		expect(commentor.getText()).toEqual('quangchau');
 	});
 
 	it('should be able to see the commentor of the video', function() {
 		var comment = element(by.css('.comment_txt'));
 
-		expect(comment.getText()).toEqual('asdasd');
+		expect(comment.getText()).toEqual('1');
 	});
 
 	it('should be able to see the RELATED BROADCASTS title text', function() {
@@ -58,7 +58,7 @@ describe('Video page', function() {
 	it('should be able to see the the title of the 1st RELATED BROADCASTS vod', function() {
 		var title = browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div[1]/a/div/div[1]'));
 
-		expect(title.getText()).toEqual('Test 13');
+		expect(title.getText()).toEqual('Rec 20 sec test');
 	});
 
 });

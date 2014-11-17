@@ -1,7 +1,7 @@
 describe('edit user profile', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://lsng.livestation.com'); 
+		browser.get('http://staging-lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -12,11 +12,11 @@ describe('edit user profile', function() {
 
 		login.click();
 		emailLogin.click();
-		username.sendKeys('quang.chau');
+		username.sendKeys('quangchau');
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back Quang.chau');
+		expect(welcome.getText()).toEqual('Welcome back quangchau');
 	});
 
 	it('should be able to go to the edit user profile pop up', function() {
@@ -38,7 +38,7 @@ describe('edit user profile', function() {
 		var bio = element(by.id('bio_input'));
 
 		username.clear();
-		username.sendKeys('quang.chau');
+		username.sendKeys('quangchau');
 
 		first_name.clear();
 		first_name.sendKeys('quang');

@@ -1,7 +1,7 @@
 describe('Filter and Recommended buttons', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://lsng.livestation.com'); 
+		browser.get('http://staging-lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -12,18 +12,18 @@ describe('Filter and Recommended buttons', function() {
 
 		login.click();
 		emailLogin.click();
-		username.sendKeys('quang.chau');
+		username.sendKeys('quangchau');
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back Quang.chau');
+		expect(welcome.getText()).toEqual('Welcome back quangchau');
 	});
 
 	it('should be able to go to the trending page by clicking on the icon', function() {
 		var trending = element(by.id('trend-icon'));
 
 		trending.click();
-		expect(browser.getCurrentUrl()).toEqual('http://lsng.livestation.com/#/trending');
+		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/trending');
 	});
 
 
