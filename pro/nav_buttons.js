@@ -1,7 +1,7 @@
 describe('Filter and Recommended buttons', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -23,7 +23,7 @@ describe('Filter and Recommended buttons', function() {
 		var trending = element(by.id('trend-icon'));
 
 		trending.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/trending');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/trending');
 	});
 
 

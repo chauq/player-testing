@@ -1,7 +1,7 @@
 describe('changePW/edge password login', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -55,7 +55,7 @@ describe('changePW/edge password login', function() {
 	});
 
 	it('should be able to show a error message if user enters the old password', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -74,7 +74,7 @@ describe('changePW/edge password login', function() {
 	});
 
 	it('should be able to show a error message if user enters a password with all caps in it', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -93,7 +93,7 @@ describe('changePW/edge password login', function() {
 	});
 
 	it('should be able to show a error message if user enters a password with no caps in it', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -112,7 +112,7 @@ describe('changePW/edge password login', function() {
 	});
 
 	it('should be able to log in as a user using new password', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));

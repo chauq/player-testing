@@ -1,7 +1,7 @@
 describe('Video page', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -20,9 +20,9 @@ describe('Video page', function() {
 	});
 
 	it('should be able to go to the test station page by going to a link', function() {
-		browser.get('http://staging-lsng.livestation.com/#/station/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
+		browser.get('http://staging.lsng.livestation.com/#/station/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/station/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/station/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
 	});
 
 	it('should be able to see the title of the video', function() {

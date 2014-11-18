@@ -1,7 +1,7 @@
 describe('lsng login', function() {
 
 	it('should be able to show the login popup title', function() {
-		browser.get('http://staging-lsng.livestation.com/#/intro'); 
+		browser.get('http://staging.lsng.livestation.com/#/intro'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var title = element(by.css('.modal h1'));
@@ -12,7 +12,7 @@ describe('lsng login', function() {
 	});
 
 	it('should be able to show a error message if user enters wrong login details', function() {
-		browser.get('http://staging-lsng.livestation.com/#/intro'); 
+		browser.get('http://staging.lsng.livestation.com/#/intro'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -31,7 +31,7 @@ describe('lsng login', function() {
 	});
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://staging-lsng.livestation.com/#/intro'); 
+		browser.get('http://staging.lsng.livestation.com/#/intro'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));

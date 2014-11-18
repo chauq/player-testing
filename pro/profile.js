@@ -1,7 +1,7 @@
 describe('user profile', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -29,7 +29,7 @@ describe('user profile', function() {
 		avatar.click();
 		profile.click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/profile');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/profile');
 	});
 
 	it('should be able to go to followers list', function() {
@@ -40,7 +40,7 @@ describe('user profile', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[3]/div[1]/div/div[1]/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('Paul_livestation');               
+                expect(promise).toEqual('Ash');               
                 console.log("Expected text is: " + promise); 
             });
 
@@ -57,7 +57,7 @@ describe('user profile', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div/a/div/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('Watch BBC WorldNews');               
+                expect(promise).toEqual('Proteus Core Take Two');               
                 console.log("Expected text is: " + promise); 
             });
 
@@ -72,7 +72,7 @@ describe('user profile', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div/a/div/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('New batteries');               
+                expect(promise).toEqual('Timer test');               
                 console.log("Expected text is: " + promise); 
             });
 

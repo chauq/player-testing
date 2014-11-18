@@ -1,7 +1,7 @@
 describe('About Livestation', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://staging-lsng.livestation.com/#/intro'); 
+		browser.get('http://staging.lsng.livestation.com/#/intro'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -20,21 +20,21 @@ describe('About Livestation', function() {
 	});
 
 	it('should be able to see the about Livestation page', function() {
-		browser.get('http://lsng.livestation.com/#/about'); 
+		browser.get('http://staging.lsng.livestation.com/#/about'); 
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/about');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/about');
 	});
 
 	it('should be able to see the terms page', function() {
 		browser.driver.findElement(by.xpath('//*[@id="footer_container"]/div/div[1]/ul/li[2]/a')).click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/terms');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/terms');
 	});
 
 	it('should be able to see the privacy page', function() {
 		browser.driver.findElement(by.xpath('//*[@id="footer_container"]/div/div[1]/ul/li[3]/a')).click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/privacy');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/privacy');
 	});
 
 	it('should be able to see the support page', function() {
@@ -45,7 +45,7 @@ describe('About Livestation', function() {
 	});
 
 	it('should be able to logout of the website', function() {
-		browser.get('http://lsng.livestation.com'); 
+		browser.get('http://staging.lsng.livestation.com'); 
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 

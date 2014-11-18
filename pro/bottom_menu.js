@@ -1,7 +1,7 @@
 describe('bottom menu bar', function() {
 
 	it('should be able to log in as a user using username', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -37,11 +37,11 @@ describe('bottom menu bar', function() {
 
 		about.click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/#/about');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/about');
 	});
 
 	it('should be able to got back to the home screen and scroll down the page', function() {
-		browser.get('http://staging-lsng.livestation.com/home'); 
+		browser.get('http://staging.lsng.livestation.com/home'); 
 
 		var scrollIntoView = function () {
         	arguments[0].scrollIntoView();
@@ -55,11 +55,11 @@ describe('bottom menu bar', function() {
 
 		about.click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/about');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/about');
 	});
 
 	it('should be able to got back to the home screen and scroll down the page', function() {
-		browser.get('http://lsng.livestation.com/#/home'); 
+		browser.get('http://staging.lsng.livestation.com/#/home'); 
 
 		var scrollIntoView = function () {
         	arguments[0].scrollIntoView();
@@ -73,11 +73,11 @@ describe('bottom menu bar', function() {
 
 		about.click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/about');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/about');
 	});
 
 	it('should be able to got back to the home screen and scroll down the page', function() {
-		browser.get('http://lsng.livestation.com/#/home'); 
+		browser.get('http://staging.lsng.livestation.com/#/home'); 
 
 		var scrollIntoView = function () {
         	arguments[0].scrollIntoView();
@@ -91,7 +91,7 @@ describe('bottom menu bar', function() {
 
 		about.click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging-lsng.livestation.com/about');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/about');
 	});
 
 });

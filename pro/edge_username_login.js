@@ -1,7 +1,7 @@
 describe('edge username login', function() {
 
 	it('should be able to log in as a user using username, even if the username has caps in it', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -31,7 +31,7 @@ describe('edge username login', function() {
 	});
 
 	it('should be able to log in as a user using username, even if the username has a space in front of it', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));
@@ -61,7 +61,7 @@ describe('edge username login', function() {
 	});
 
 	it('should be able to log in as a user using username, even if the username has a space in after of it', function() {
-		browser.get('http://staging-lsng.livestation.com/'); 
+		browser.get('http://staging.lsng.livestation.com/'); 
 
 		var login = element(by.css('.btn_intro_login'));
 		var emailLogin = element(by.id('btn-modal-login-email'));

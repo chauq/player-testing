@@ -1,4 +1,4 @@
-browser.get('http://staging-lsng.livestation.com/'); 
+browser.get('http://staging.lsng.livestation.com/'); 
 
 var loginBtn = element(by.css('.btn_intro_login'));
 var emailLogin = element(by.id('btn-modal-login-email'));
