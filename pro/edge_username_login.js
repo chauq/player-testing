@@ -16,18 +16,18 @@ describe('edge username login', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to logout of the website', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
+		browser.driver.manage().window().maximize();
 
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 
 	it('should be able to log in as a user using username, even if the username has a space in front of it', function() {
@@ -46,18 +46,16 @@ describe('edge username login', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to logout of the website', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 
 	it('should be able to log in as a user using username, even if the username has a space in after of it', function() {
@@ -76,18 +74,16 @@ describe('edge username login', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to logout of the website', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 	
 });

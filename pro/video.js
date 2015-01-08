@@ -16,7 +16,7 @@ describe('Video page', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to go to the test station page by going to a link', function() {
@@ -32,19 +32,21 @@ describe('Video page', function() {
 	});
 
 	it('should be able to see the location of the video', function() {
-		var location = browser.driver.findElement(by.xpath('//*[@id="content_detail"]/div[2]/div[2]/span[2]'));
+		var location = browser.driver.findElement(by.xpath('//*[@id="content_detail"]/div/div[2]/span[2]'));
 
 		expect(location.getText()).toEqual('• Hoxton, London, United Kingdom');
 	});
 
 	it('should be able to see the commentor of the video', function() {
-		var commentor = element(by.binding('commentor'));
+		//var commentor = element(by.binding('commentor'));
+		var commentor = browser.driver.findElement(by.xpath('//*[@id="comment.id"]/div/div/div[1]/div[1]'));
 
-		expect(commentor.getText()).toEqual('quangchau');
+		expect(commentor.getText()).toEqual('You');
 	});
 
-	it('should be able to see the commentor of the video', function() {
-		var comment = element(by.css('.comment_txt'));
+	it('should be able to see the comment of the video', function() {
+		//var comment = element(by.css('.comment_txt'));
+		var comment = browser.driver.findElement(by.xpath('//*[@id="comment.id"]/div/div/div[2]'));
 
 		expect(comment.getText()).toEqual('1');
 	});
@@ -58,7 +60,7 @@ describe('Video page', function() {
 	it('should be able to see the the title of the 1st RELATED BROADCASTS vod', function() {
 		var title = browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div[1]/a/div/div[1]'));
 
-		expect(title.getText()).toEqual('Rec 20 sec test');
+		expect(title.getText()).toEqual('0:47');
 	});
 
 });

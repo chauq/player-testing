@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"se",
+				"sendKeys"
+			],
+			[
+				"login",
+				"login"
+			],
+			[
 				"user",
 				"username"
 			],
@@ -40,10 +48,6 @@
 				"require"
 			],
 			[
-				"se",
-				"session"
-			],
-			[
 				"Lo",
 				"Log_in"
 			],
@@ -72,62 +76,18 @@
 	"buffers":
 	[
 		{
-			"file": "edit_profile.js",
-			"settings":
-			{
-				"buffer_size": 1782,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "home.js",
-			"settings":
-			{
-				"buffer_size": 2157,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lsng_login.js",
-			"settings":
-			{
-				"buffer_size": 1893,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Readme.md",
-			"settings":
-			{
-				"buffer_size": 1035,
-				"line_ending": "Unix",
-				"name": "Readme for lsng website qa"
-			}
-		},
-		{
-			"file": "trending.js",
-			"settings":
-			{
-				"buffer_size": 1490,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "test.js",
 			"settings":
 			{
-				"buffer_size": 149,
+				"buffer_size": 148,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "describe('Video page', function() {\n\n	it('should be able to log in as a user using username', function() {\n		browser.get('http://lsng.livestation.com'); \n\n		var login = element(by.css('.btn_intro_login'));\n		var emailLogin = element(by.id('btn-modal-login-email'));\n		var username = element(by.id('login_email_input'));\n		var password = element(by.id('login_password_input'));\n		var done = element(by.id('btn-modal-login-email-done'));\n		var welcome = element(by.css('.welcome_text'));\n\n		login.click();\n		emailLogin.click();\n		username.sendKeys('quang.chau');\n		password.sendKeys('1');\n		done.click();\n\n		expect(welcome.getText()).toEqual('Welcome back Quang.chau');\n	});\n\n	it('should be able to go to the test station page by going to a link', function() {\n		browser.get('http://lsng.livestation.com/#/content/f3bcfa38-8adf-46e0-8629-b0fc3d0d1fcb');\n\n		expect(browser.getCurrentUrl()).toEqual('http://lsng.livestation.com/#/content/f3bcfa38-8adf-46e0-8629-b0fc3d0d1fcb');\n	});\n\n	it('should be able to see the title of the video', function() {\n		var title = element(by.css('.feed_title'));\n\n		expect(title.getText()).toEqual('Rec 20 sec test');\n	});\n\n	it('should be able to see the location of the video', function() {\n		var location = browser.driver.findElement(by.xpath('//*[@id=\"content_detail\"]/div[2]/div[2]/span[2]'));\n\n		expect(location.getText()).toEqual('• Bevenden Street, London, United Kingdom');\n	});\n\n	it('should be able to see the commentor of the video', function() {\n		var commentor = element(by.binding('commentor'));\n\n		expect(commentor.getText()).toEqual('Ash');\n	});\n\n	it('should be able to see the commentor of the video', function() {\n		var comment = element(by.css('.comment_txt'));\n\n		expect(comment.getText()).toEqual('Test');\n	});\n\n	it('should be able to see the RELATED BROADCASTS title text', function() {\n		var title = element(by.css('#rb_title'));\n\n		expect(title.getText()).toEqual('RELATED BROADCASTS');\n	});\n\n	it('should be able to see the the title of the 1st RELATED BROADCASTS vod', function() {\n		var title = browser.driver.findElement(by.xpath('//*[@id=\"directive-two-col-feed\"]/div[1]/a/div/div[1]'));\n\n		expect(title.getText()).toEqual('Rec 20 sec test');\n	});\n\n});",
-			"file": "video.js",
-			"file_size": 2216,
-			"file_write_time": 1411472487000000,
+			"file": "test_logout.js",
 			"settings":
 			{
-				"buffer_size": 2207,
+				"buffer_size": 8002,
 				"line_ending": "Unix"
 			}
 		},
@@ -135,7 +95,31 @@
 			"file": "conf.js",
 			"settings":
 			{
-				"buffer_size": 243,
+				"buffer_size": 442,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "join_exist.js",
+			"settings":
+			{
+				"buffer_size": 2450,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "search.js",
+			"settings":
+			{
+				"buffer_size": 992,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "profile.js",
+			"settings":
+			{
+				"buffer_size": 4440,
 				"line_ending": "Unix"
 			}
 		}
@@ -164,31 +148,81 @@
 	},
 	"file_history":
 	[
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/lsng_login.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/login.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/channel.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_broadcast_profile_edit.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_broadcast_summary.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_Broadcast_swipe_delete.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/logout.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/lsng_logout.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/pw_reset.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/profile.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/test.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/conf.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/all.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/guest_users.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/spec.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/home.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/video.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/edge_username_login.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/login_buttons.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/flaging.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/change_edge_password.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/lsng_login.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/about_livestation.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/wingify.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/reset.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/join_exist.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/channel.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/edit_profile.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/bottom_menu.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/google.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/nav_buttons.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/trending.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/conf.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/profile.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/daily-check/nosub.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/test.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/offline.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/login.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_login.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_password_reset.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_login_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_app_settings.featurewip",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_login_details.featurewip",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_edit_profile.featurewip",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_station_profile.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_trending.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_station.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_pre_live.featurewip",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_profile.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/manual/video_flag.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/support/env.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/bottom_menu,js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_stations_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_profile_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_intro_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_intro.featurewip",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_password_reset_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_logout_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_trending_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/manual/sort_station.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/manual/fliter_trending.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/manual/fliter_station.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/manual/empty_feed.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/empty_feed.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_station_search.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_live.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_vod_comments.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/OS_vod_overlays.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_pre_live.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_change_app_setting_steps.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_station_sort.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_empty_feed.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_premium_station.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_video_cmn.feature",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/Readme.md",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/support/env.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/step_definitions/web_login_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/step_definitions/web_logout_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/support/env.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/support/env.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/all.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/daily-check/nosub.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/step_definitions/web_intro_steps.coffee",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/step_definitions/web_login_steps.coffee",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_pre_live.feature",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_pre_live_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_edit_profile.featurewip",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_login_details.featurewip",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_stations_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_station.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_station_profile.feature",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/support/world.coffee",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/cucumberConf.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/web_login.feature",
@@ -207,37 +241,25 @@
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/todo-spec.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/conf.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_login_details.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_password_reset.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_password_reset_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_edit_profile.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_trending.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_trending_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_live.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_app_settings.featurewip",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_profile_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_profile.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_login.feature",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_edit_profile_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_change_login_details_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/support/hook.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_intro.feature",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/web_trending.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_change_app_setting_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_station_profile_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/.gitignore",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/login.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_intro_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/daily-check/daily-check.sublime-workspace",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_station_profile_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_stations_profile_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_app_settings.feature",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_live_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_logout_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/step_definitions/desk_modal_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/support/debuging.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/.gitignore",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/.jshintrc",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_login_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/p.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/web_login_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/desk_modal.feature",
@@ -253,34 +275,7 @@
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/iOS_intro.feature",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/step_definition/iOS_pre_live_steps.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/gemfile",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/iOS_pre_live.features",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/step_definition/iOS_intro_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/step_definition/iOS_login_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/step_definition/iOS_profile_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/iOS_profile.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/iOS_login.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/login.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/gemfile",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/web/features/step_definitions/dev-175_steps.rb",
-		"/Users/mikeo/Library/Application Support/Sublime Text 2/Packages/Ruby/ShowZeroWidthSpace.py",
-		"/Users/mikeo/Library/Application Support/Sublime Text 2/Packages/User/untitled.py",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/features/search.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/features/codebreaker_submits_guess.featur",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/bin/codebreaker",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/spec/codebreaker/game_spec.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/lib/codebreaker.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/lib/codebreaker/game.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/features/support/env.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/spec/spec_helper.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/features/step_definitions/codebreaker_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/features/codebreaker_submits_guess.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/features/codebreaker_starts_game.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/codebreaker/lib/codebreaker/codebreaker.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/messages/features/support/factories.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/messages/features/see_messages.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/messages/squeaker/Gemfile",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/messages/gemfile",
-		"/Users/mikeo/Documents/work/Livestation/source/git/cucumber/messages/features/step_definitions/user_steps.rb"
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/app/features/iOS_pre_live.features"
 	],
 	"find":
 	{
@@ -299,6 +294,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"intro",
+			"'http://staging-lsng.livestation.com/'",
+			"'http://staging-lsng.livestation.com/#/intro'",
+			"'http://staging-lsng.livestation.com/'",
+			"http://staging-lsng\n",
+			"staging-\n",
+			"(staging-);\n",
 			"();\n",
 			"find_element",
 			"And I click on the Edit Profile button",
@@ -315,6 +317,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'http://staging.lsng.livestation.com/'",
+			"'http://staging.lsng.livestation.com/#/intro'",
+			"'http://staging.lsng.livestation.com/'"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -325,50 +330,48 @@
 	"groups":
 	[
 		{
-			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "edit_profile.js",
+					"file": "test.js",
 					"settings":
 					{
-						"buffer_size": 1782,
+						"buffer_size": 148,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1411,
-								1411
+								92,
+								92
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 292.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "home.js",
+					"file": "test_logout.js",
 					"settings":
 					{
-						"buffer_size": 2157,
+						"buffer_size": 8002,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								485,
-								485
+								7781,
+								7781
 							]
 						],
 						"settings":
@@ -384,18 +387,44 @@
 				},
 				{
 					"buffer": 2,
-					"file": "lsng_login.js",
+					"file": "conf.js",
 					"settings":
 					{
-						"buffer_size": 1893,
+						"buffer_size": 442,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								884,
-								884
+								435,
+								435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "join_exist.js",
+					"settings":
+					{
+						"buffer_size": 2450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1328,
+								1308
 							]
 						],
 						"settings":
@@ -410,46 +439,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Readme.md",
-					"settings":
-					{
-						"buffer_size": 1035,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								915,
-								915
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Readme for lsng website qa",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "trending.js",
+					"file": "search.js",
 					"settings":
 					{
-						"buffer_size": 1490,
+						"buffer_size": 992,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								921,
-								921
+								813,
+								813
 							]
 						],
 						"settings":
@@ -465,18 +467,18 @@
 				},
 				{
 					"buffer": 5,
-					"file": "test.js",
+					"file": "profile.js",
 					"settings":
 					{
-						"buffer_size": 149,
+						"buffer_size": 4440,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								93,
-								93
+								2319,
+								2319
 							]
 						],
 						"settings":
@@ -484,60 +486,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "video.js",
-					"settings":
-					{
-						"buffer_size": 2207,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								672,
-								672
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 353.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "conf.js",
-					"settings":
-					{
-						"buffer_size": 243,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								210,
-								212
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -582,7 +531,7 @@
 	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -609,6 +558,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 223.0,
 	"status_bar_visible": true
 }

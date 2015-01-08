@@ -16,7 +16,7 @@ describe('bottom menu bar', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to scroll down the home page', function() {

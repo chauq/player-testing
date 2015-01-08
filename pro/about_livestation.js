@@ -16,7 +16,7 @@ describe('About Livestation', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to see the about Livestation page', function() {
@@ -49,11 +49,9 @@ describe('About Livestation', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 
 });

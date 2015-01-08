@@ -16,7 +16,7 @@ describe('user profile', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 		browser.driver.manage().window().maximize()
 	});
 
@@ -40,7 +40,7 @@ describe('user profile', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[3]/div[1]/div/div[1]/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('Ash');               
+                expect(promise).toEqual('Paul Robinson');
                 console.log("Expected text is: " + promise); 
             });
 
@@ -55,9 +55,9 @@ describe('user profile', function() {
 
 		likes.click();
 
-		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div/a/div/div[1]')).getText().
+		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div[1]/a/div[2]/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('Proteus Core Take Two');               
+                expect(promise).toEqual('Audio test');
                 console.log("Expected text is: " + promise); 
             });
 
@@ -65,14 +65,14 @@ describe('user profile', function() {
 	});
 
 	it('should be able to go to broadcast list', function() {
-		var broadcast = element(by.id('sp_broadcast'));
+		var broadcast = browser.driver.findElement(by.xpath('//*[@id="sp_broadcast"]'));
 		//var name = element.all(by.binding('feed_title ng-binding'));
 
 		broadcast.click();
 
-		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div/a/div/div[1]')).getText().
+		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div[1]/a/div[2]/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('Timer test');               
+                expect(promise).toEqual('f24');
                 console.log("Expected text is: " + promise); 
             });
 
@@ -80,10 +80,6 @@ describe('user profile', function() {
 	});
 
 	it('should be able to go to the user profile bio', function() {
-		var next = element(by.id('select-next-profile-overlay'));
-
-		next.click();
-
 		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[1]/div/div/div[3]')).getText().
 			    then(function(promise){
                 expect(promise).toEqual('Appium test');               
@@ -113,10 +109,8 @@ describe('user profile', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 });

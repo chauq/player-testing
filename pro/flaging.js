@@ -66,11 +66,9 @@ describe('flaging', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 
 });

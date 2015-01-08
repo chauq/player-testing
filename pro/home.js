@@ -16,13 +16,13 @@ describe('lsng home', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
-	it('should be able to see the BBC World News station', function() {
+	it('should be able to see the a station', function() {
 		var bbc = element.all(by.css('.feed_text_holder')).get(1);
 
-		expect(bbc.getText()).toEqual("Watch BBC WorldNews\nby Bbc-world\nLIVE");
+		expect(bbc.getText()).toEqual("Untitled Broadcast\nby euronews Arabic\nLive");
 	});
 
 	it('should be able to scroll down the home page', function() {
@@ -30,12 +30,14 @@ describe('lsng home', function() {
         	arguments[0].scrollIntoView();
     	}
 
-    	browser.executeScript(scrollIntoView, browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[11]/a/img')));
+    	browser.executeScript(scrollIntoView, browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[46]/a/div/div[1]')));
 
     	//check if top bar is still here by clicking the home icon
-    	var trending = element(by.id('home-icon'));
+    	var home = element(by.id('home-icon'));
 
-		trending.click();
+		home.click();
+
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/home');
 	});
 
 	it('should be able to scroll up the home page', function() {
@@ -43,12 +45,14 @@ describe('lsng home', function() {
         	arguments[0].scrollIntoView();
     	}
 
-    	browser.executeScript(scrollIntoView, browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[3]/a/img')));
+    	browser.executeScript(scrollIntoView, browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[2]/a/div/div')));
 
     	//check if top bar is still here by clicking the home icon
-    	var trending = element(by.id('home-icon'));
+    	var home = element(by.id('home-icon'));
 
-		trending.click();
+		home.click();
+
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/home');
 	});
 
 
@@ -101,12 +105,11 @@ describe('lsng home', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		browser.driver.manage().window().maximize();
+
 		avatar.click();
-		//browser.sleep(1000);
 		logout.click();
+		//browser.sleep(1000);
 		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 

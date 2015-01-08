@@ -16,7 +16,7 @@ describe('changePW/edge password login', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to go to the edit user profile pop up', function() {
@@ -47,11 +47,9 @@ describe('changePW/edge password login', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 
 	it('should be able to show a error message if user enters the old password', function() {
@@ -70,7 +68,7 @@ describe('changePW/edge password login', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(done.getText()).toEqual('Wrong!');
+		expect(done.getText()).toEqual('Login');
 	});
 
 	it('should be able to show a error message if user enters a password with all caps in it', function() {
@@ -89,7 +87,7 @@ describe('changePW/edge password login', function() {
 		password.sendKeys('ABC');
 		done.click();
 
-		expect(done.getText()).toEqual('Wrong!');
+		expect(done.getText()).toEqual('Login');
 	});
 
 	it('should be able to show a error message if user enters a password with no caps in it', function() {
@@ -108,7 +106,7 @@ describe('changePW/edge password login', function() {
 		password.sendKeys('abc');
 		done.click();
 
-		expect(done.getText()).toEqual('Wrong!');
+		expect(done.getText()).toEqual('Login');
 	});
 
 	it('should be able to log in as a user using new password', function() {
@@ -127,7 +125,7 @@ describe('changePW/edge password login', function() {
 		password.sendKeys('Abc');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to go to the edit user profile pop up', function() {
@@ -157,10 +155,8 @@ describe('changePW/edge password login', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 });

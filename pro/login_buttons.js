@@ -14,9 +14,7 @@ describe('login buttons', function() {
   it('should be able to close the Join Now box to go back to the home page', function() {
 	 browser.driver.findElement(by.id('btn-modal-close')).click();
 
-	 var intro = element(by.css('.tagline'));
-
-	 expect(intro.getText()).toEqual('Be There Now');
+	 expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
   });
 
   it('should be able to close the login box to go back to the home page', function() {
@@ -27,10 +25,8 @@ describe('login buttons', function() {
     login.click();
     //browser.sleep(1000);
     browser.driver.findElement(by.id('btn-modal-close')).click();
-    
-    var intro = element(by.css('.tagline'));
 
-    expect(intro.getText()).toEqual('Be There Now');
+    expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
   });
 
    it('should be able to close the login box, after going to the email login box. It should then to go back to the home page', function() {
@@ -44,8 +40,7 @@ describe('login buttons', function() {
     //browser.sleep(1000);
     browser.driver.findElement(by.id('btn-modal-close')).click();
 
-    var intro = element(by.css('.tagline'));
-    expect(intro.getText()).toEqual('Be There Now');
+    expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
   });
 
 

@@ -19,7 +19,6 @@ describe('lsng login', function() {
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
-		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
 		emailLogin.click();
@@ -27,7 +26,7 @@ describe('lsng login', function() {
 		password.sendKeys('12');
 		done.click();
 
-		expect(done.getText()).toEqual('Wrong!');
+		expect(done.getText()).toEqual('Login');
 	});
 
 	it('should be able to log in as a user using username', function() {
@@ -46,19 +45,18 @@ describe('lsng login', function() {
 		password.sendKeys('1');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to logout of the website', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		var intro = element(by.css('.tagline'));
-
 		browser.driver.manage().window().maximize();
+
 		avatar.click();
 		logout.click();
-		expect(intro.getText()).toEqual('Be There Now');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
 	});
 	
 });

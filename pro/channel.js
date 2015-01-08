@@ -4,7 +4,7 @@ describe('watch a channel', function() {
 		var login = require('./login');
 		var welcome = element(by.css('.welcome_text'));
 
-		expect(welcome.getText()).toEqual('Welcome back quangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to go to the station list page by clicking on the icon', function() {
