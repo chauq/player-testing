@@ -9,5 +9,5 @@ var done = element(by.id('btn-modal-login-email-done'));
 loginBtn.click();
 emailLogin.click();
 usernameFd.sendKeys('quangchau');
-passwordFd.sendKeys('1');
+passwordFd.sendKeys('123123');
 done.click();

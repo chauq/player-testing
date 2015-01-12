@@ -13,7 +13,7 @@ describe('lsng logout test', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -38,7 +38,7 @@ describe('lsng logout test', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -69,7 +69,7 @@ describe('lsng logout test', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -100,7 +100,7 @@ describe('lsng logout test', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -131,7 +131,7 @@ describe('lsng logout test', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -162,7 +162,7 @@ describe('lsng logout test', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -193,7 +193,7 @@ describe('lsng logout test', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -228,7 +228,7 @@ describe('lsng logout test', function() {
 		//browser.get('http://staging.lsng.livestation.com/#/login/email'); 
 		
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');

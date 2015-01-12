@@ -13,7 +13,7 @@ describe('changePW/edge password login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -36,9 +36,9 @@ describe('changePW/edge password login', function() {
 		var newPassword = element(by.id('new_password_input'));
 		var confirm = element(by.id('conf_password_input'));
 
-		old.sendKeys('1');
-		newPassword.sendKeys('Abc');
-		confirm.sendKeys('Abc');
+		old.sendKeys('123123');
+		newPassword.sendKeys('AbcAbc');
+		confirm.sendKeys('AbcAbc');
 
 		element(by.id('btn-edit-profile-modal-done')).click();
 	});
@@ -65,7 +65,7 @@ describe('changePW/edge password login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(done.getText()).toEqual('Login');
@@ -84,7 +84,7 @@ describe('changePW/edge password login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('ABC');
+		password.sendKeys('ABCABC');
 		done.click();
 
 		expect(done.getText()).toEqual('Login');
@@ -103,7 +103,7 @@ describe('changePW/edge password login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('abc');
+		password.sendKeys('abcabc');
 		done.click();
 
 		expect(done.getText()).toEqual('Login');
@@ -122,7 +122,7 @@ describe('changePW/edge password login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('Abc');
+		password.sendKeys('AbcAbc');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -144,9 +144,9 @@ describe('changePW/edge password login', function() {
 		var newPassword = element(by.id('new_password_input'));
 		var confirm = element(by.id('conf_password_input'));
 
-		old.sendKeys('Abc');
-		newPassword.sendKeys('1');
-		confirm.sendKeys('1');
+		old.sendKeys('AbcAbc');
+		newPassword.sendKeys('123123');
+		confirm.sendKeys('123123');
 
 		element(by.id('btn-edit-profile-modal-done')).click();
 	});

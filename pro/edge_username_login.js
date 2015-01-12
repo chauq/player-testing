@@ -13,7 +13,7 @@ describe('edge username login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('QuangChau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -43,7 +43,7 @@ describe('edge username login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys(' quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -71,7 +71,7 @@ describe('edge username login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau ');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');

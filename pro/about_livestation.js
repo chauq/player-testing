@@ -13,7 +13,7 @@ describe('About Livestation', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -26,13 +26,13 @@ describe('About Livestation', function() {
 	});
 
 	it('should be able to see the terms page', function() {
-		browser.driver.findElement(by.xpath('//*[@id="footer_container"]/div/div[1]/ul/li[2]/a')).click();
+		browser.driver.findElement(by.xpath('//*[@id="bottom-menu"]/div/div[2]/div[4]/a')).click();
 
 		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/terms');
 	});
 
 	it('should be able to see the privacy page', function() {
-		browser.driver.findElement(by.xpath('//*[@id="footer_container"]/div/div[1]/ul/li[3]/a')).click();
+		browser.driver.findElement(by.xpath('//*[@id="bottom-menu"]/div/div[2]/div[3]/a')).click();
 
 		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/privacy');
 	});

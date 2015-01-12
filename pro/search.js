@@ -13,7 +13,7 @@ describe('search', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -26,9 +26,49 @@ describe('search', function() {
 		search.sendKeys('bbc');
 		search.sendKeys(protractor.Key.ENTER);
 		search.sendKeys(protractor.Key.ENTER);
-		browser.sleep(10000);
+		//browser.sleep(10000);
 
-		//expect(welcome.getText()).toEqual('Welcome back quang');
+		browser.driver.findElement(by.xpath('//*[@id="stations-container"]/div/div[2]')).getText().
+			then(function(promise){
+            expect(promise).toEqual('No Results');
+            console.log("Expected text is: " + promise); 
+        });
+	});
+
+	it('should be able to search from trending page', function() {
+		browser.get('http://staging.lsng.livestation.com/#/trending'); 
+
+		var search = element(by.id('search_txt'));
+
+		search.click();
+		search.sendKeys('timer');
+		search.sendKeys(protractor.Key.ENTER);
+		search.sendKeys(protractor.Key.ENTER);
+		//browser.sleep(10000);
+
+		browser.driver.findElement(by.xpath('//*[@id="trends-container"]/div/div[2]/a/div[2]/div[1]')).getText().
+			then(function(promise){
+            expect(promise).toEqual('Timer test');
+            console.log("Expected text is: " + promise); 
+        });
+	});
+
+	it('should be able to search from stations page', function() {
+		browser.get('http://staging.lsng.livestation.com/#/stations'); 
+		
+		var search = element(by.id('search_txt'));
+
+		search.click();
+		search.sendKeys('bbc');
+		search.sendKeys(protractor.Key.ENTER);
+		search.sendKeys(protractor.Key.ENTER);
+		//browser.sleep(10000);
+
+		browser.driver.findElement(by.xpath('//*[@id="stations-container"]/div/div[2]/div/div[1]/div[1]')).getText().
+			then(function(promise){
+            expect(promise).toEqual('BBC News');
+            console.log("Expected text is: " + promise); 
+        });
 	});
 
 }); 

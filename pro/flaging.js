@@ -13,10 +13,10 @@ describe('flaging', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
-		expect(welcome.getText()).toEqual('Welcome back qaangchau');
+		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
 
 	it('should be able to go to the timer test', function() {

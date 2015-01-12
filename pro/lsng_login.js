@@ -23,7 +23,7 @@ describe('lsng login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quang');
-		password.sendKeys('12');
+		password.sendKeys('123456');
 		done.click();
 
 		expect(done.getText()).toEqual('Login');
@@ -42,7 +42,7 @@ describe('lsng login', function() {
 		login.click();
 		emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
