@@ -3,17 +3,17 @@ describe('trending page', function() {
 	it('should be able to log in as a user using username', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quangchau');
-		password.sendKeys('1');
+		password.sendKeys('123123');
 		done.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
@@ -23,7 +23,7 @@ describe('trending page', function() {
 		var trending = element(by.id('trend-icon'));
 
 		trending.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/trending');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/trending');
 	});
 
 	it('should be able to scroll down the trending page', function() {
@@ -56,7 +56,7 @@ describe('trending page', function() {
 		//element.all(by.css('.itembgratio .ratio-content')).get(1).click();
 		browser.driver.findElement(by.xpath('//*[@id="trends-container"]/div[2]/span/span/div/div[2]/a/div/div[1]/div')).click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/profile/f08f288d-78d2-4a77-aff5-d9f771814a65');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/profile/f08f288d-78d2-4a77-aff5-d9f771814a65');
 	});
 
 });

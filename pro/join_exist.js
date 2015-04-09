@@ -1,9 +1,9 @@
 describe('Join as existing user', function() {
 
 	it('should be able sign up with email from the home page', function() {
-		browser.get('http://staging.lsng.livestation.com/#/intro'); 
+		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var join = element(by.id('btn-intro-join-now'));
+		var join = element(by.id('btn-intro-login'));
 		var email = element(by.id('btn-modal-reg-email'));
 		var title = element(by.css('.regHead'));
 
@@ -34,8 +34,9 @@ describe('Join as existing user', function() {
 		expect(done.getText()).toEqual('Done');
 	});
 
+/*
 	it('should be able sign up with email from the guest user pop up', function() {
-		browser.get('http://staging.lsng.livestation.com/#/station/Ash/bb50dd05-3bbd-4d86-b65f-acc5112e8a36'); 
+		browser.get('http://staging.lsng.livestation.com/Ash/bb50dd05-3bbd-4d86-b65f-acc5112e8a36'); 
 
 		browser.sleep(1000);
 		//var guest = element(by.css('.top_guest_overlay'));
@@ -71,5 +72,6 @@ describe('Join as existing user', function() {
 
 		expect(done.getText()).toEqual('Done');
 	});
+*/
 
 });

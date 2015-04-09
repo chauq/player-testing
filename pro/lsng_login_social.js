@@ -1,9 +1,9 @@
 describe('lsng login social', function() {
 
 	it('should be able to show the login popup title', function() {
-		browser.get('http://staging.lsng.livestation.com/#/intro'); 
+		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.btn_intro_login'));
+		var login = element(by.css('.login_txt a'));
 		var title = element(by.css('.modal h1'));
 
 		login.click();
@@ -12,20 +12,21 @@ describe('lsng login social', function() {
 	});
 
 	it('should be able to log in as a facebook user', function() {
-		browser.get('http://staging.lsng.livestation.com/#/intro'); 
+		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var FBLogin = browser.driver.findElement(by.xpath('//*[@id="btn-modal-login-fb"]/img'))
-		var FBusername = element(by.id('email'));
-		var FBpassword = element(by.id('pass'));
-		var FBdone = element(by.id('u_0_1'));
+		var login = element(by.css('.login_txt a'));
+		//var fbLogin = browser.driver.findElement(by.xpath('//*[@id="btn-modal-login-fb"]/img'))
+		var fbLogin = element(by.id('btn-modal-login-fb'));
+		var fbusername = element(by.id('email'));
+		var fbpassword = element(by.id('pass'));
+		var fbdone = element(by.id('u_0_1'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		FBLogin.click();
-		FBusername.sendkeys('lsftest101@gmail.com');
-		FBpassword.sendkeys('jackpot123');
-		FBdone.click();
+		fbLogin.click();
+		fbusername.sendkeys('lsftest101@gmail.com');
+		fbpassword.sendkeys('jackpot123');
+		fbdone.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
@@ -38,18 +39,18 @@ describe('lsng login social', function() {
 
 		avatar.click();
 		logout.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/intro');
 	});
 
 	it('should be able to log in as a Twitter user', function() {
 		browser.get('http://staging.lsng.livestation.com/#/intro'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var TwitterLogin = browser.driver.findElement(by.xpath('//*[@id="btn-modal-login-twitter"]/img'))
+		var login = element(by.css('.login_txt a'));
+		var twitterLogin = browser.driver.findElement(by.xpath('//*[@id="btn-modal-login-twitter"]/img'))
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		TwitterLogin.click();
+		twitterLogin.click();
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
@@ -62,7 +63,7 @@ describe('lsng login social', function() {
 
 		avatar.click();
 		logout.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/intro');
 	});
 	
 });

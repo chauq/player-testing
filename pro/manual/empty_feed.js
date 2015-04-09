@@ -3,7 +3,7 @@ describe('empty feed', function() {
 	it('should be able to log in as a user using twitter account', function() {
 		browser.get('http://lsng.livestation.com'); 
 
-		var login = element(by.css('.btn_intro_login'));
+		var login = element(by.css('.login_txt a'));
 		var twitter = element(by.id('btn-modal-login-twitter'));
 
 		login.click();

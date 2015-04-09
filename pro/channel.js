@@ -8,10 +8,10 @@ describe('watch a channel', function() {
 	});
 
 	it('should be able to go to the station list page by clicking on the icon', function() {
-		var station = element(by.id('stations-icon'));
+		var station = element(by.id('stations_link'));
 
 		station.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/stations');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/stations');
 	});
 
 	it('should be able to scroll down the station page', function() {
@@ -45,13 +45,29 @@ describe('watch a channel', function() {
 		browser.get('http://staging.lsng.livestation.com/#/stations');
 		element.all(by.css('.station-avatar-bg img')).get(1).click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/profile/41e0a4d4-fbcb-4d16-818a-666dec0ea7d1');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/station/sky_news_international/712d5ee5-867c-4fde-b34e-b48f3fbf3ac0');
+
+			browser.driver.findElement(by.xpath('//*[@id="rb_title"]')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('RELATED BROADCASTS');
+                console.log("Expected text is: " + promise); 
+            });
 	});
 
 	it('should be able to go to the video page by going to a link', function() {
-		browser.get('http://staging.lsng.livestation.com/#/profile/f08f288d-78d2-4a77-aff5-d9f771814a65');
+		browser.get('http://staging.lsng.livestation.com/#/station/sky_news_international/712d5ee5-867c-4fde-b34e-b48f3fbf3ac0');
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/profile/f08f288d-78d2-4a77-aff5-d9f771814a65');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/station/sky_news_international/712d5ee5-867c-4fde-b34e-b48f3fbf3ac0');
+
+			/*browser.driver.findElement(by.xpath('//*[@id="rb_title"]')).getText().
+			    then(function(promise){
+                expect(promise).toEqual('RELATED BROADCASTS');
+                console.log("Expected text is: " + promise); 
+            });*/
+	});
+
+	it('should be able to logout of the website', function() {
+		var logout = require('./logout');
 	});
 
 });

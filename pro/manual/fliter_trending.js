@@ -3,15 +3,15 @@ describe('Fliter the trending videos', function() {
 	it('should be able to log in as a user using username', function() {
 		browser.get('http://lsng.livestation.com'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quang.chau');
 		password.sendKeys('1');
 		done.click();

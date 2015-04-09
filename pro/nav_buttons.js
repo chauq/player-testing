@@ -3,15 +3,15 @@ describe('Filter and Recommended buttons', function() {
 	it('should be able to log in as a user using username', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('123123');
 		done.click();
@@ -23,7 +23,7 @@ describe('Filter and Recommended buttons', function() {
 		var trending = element(by.id('trend-icon'));
 
 		trending.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/trending');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/trending');
 	});
 
 
@@ -66,6 +66,10 @@ describe('Filter and Recommended buttons', function() {
 		expect(views.getText()).toEqual('VIEWS');
 		expect(recent.getText()).toEqual('LANGUAGES');
 
+	});
+
+	it('should be able to logout of the website', function() {
+		var logout = require('./logout');
 	});
 
 

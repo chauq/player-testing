@@ -3,15 +3,15 @@ describe('changePW/edge password login', function() {
 	it('should be able to log in as a user using username', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('123123');
 		done.click();
@@ -20,7 +20,7 @@ describe('changePW/edge password login', function() {
 	});
 
 	it('should be able to go to the edit user profile pop up', function() {
-		var avatar = element(by.id('top_menu_avatar'));
+		var avatar = element(by.xpath('//*[@id="top_menu_avatar"]/img'));
 		var edit = element(by.id('top-drop-edit-profile'));
 		var title = element(by.css('.regHead'));
 
@@ -49,21 +49,21 @@ describe('changePW/edge password login', function() {
 
 		avatar.click();
 		logout.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/intro');
 	});
 
 	it('should be able to show a error message if user enters the old password', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('123123');
 		done.click();
@@ -74,15 +74,15 @@ describe('changePW/edge password login', function() {
 	it('should be able to show a error message if user enters a password with all caps in it', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('ABCABC');
 		done.click();
@@ -93,15 +93,15 @@ describe('changePW/edge password login', function() {
 	it('should be able to show a error message if user enters a password with no caps in it', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('abcabc');
 		done.click();
@@ -112,15 +112,15 @@ describe('changePW/edge password login', function() {
 	it('should be able to log in as a user using new password', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.btn_intro_login'));
-		var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.css('.login_txt a'));
+		//var emailLogin = element(by.id('btn-modal-login-email'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		emailLogin.click();
+		//emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('AbcAbc');
 		done.click();
@@ -157,6 +157,6 @@ describe('changePW/edge password login', function() {
 
 		avatar.click();
 		logout.click();
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/#/intro');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/intro');
 	});
 });

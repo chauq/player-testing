@@ -1,8 +1,13 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  //'flaging.js'
-  specs: ['spec.js', 'join_exist.js', 'login_buttons.js', 'edge_username_login.js', 'change_edge_password.js', 'home.js', 'search.js', 'profile.js', 'channel.js', 'trending.js', 'video.js', 'edit_profile.js', 'about_livestation.js', 'nav_buttons.js', 'offline.js', 'lsng_login.js', 'test_logout.js', 'guest_users.js'],
+  //'flaging.js', 'trending.js', 'guest_users.js', 'edit_profile.js', 'nav_buttons.js', 'join_exist.js', 
+  //'offline.js',
+  //safari
+  specs: ['spec.js','login_buttons.js', 'edge_username_login.js', 'home.js', 
+  		  'search.js', 'profile.js', 'channel.js', 'video.js', 'about_livestation.js', 'lsng_login.js', 
+        'test_logout.js', 'test_config.js', 'test_config_fr.js', 'test_config_gb.js', '404.js'],
+  //'change_edge_password.js',
   capabilities: {
-    browserName: 'safari'
+    browserName: 'chrome'
   }
 }
