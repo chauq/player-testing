@@ -69,7 +69,15 @@ describe('Filter and Recommended buttons', function() {
 	});
 
 	it('should be able to logout of the website', function() {
-		var logout = require('./logout');
+		//var logout = require('./logout');
+		var avatar = element(by.id('top_menu_avatar'));
+		var logout = element(by.id('top-drop-logout'));
+
+		browser.driver.manage().window().maximize();
+
+		avatar.click();
+		logout.click();
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/intro');
 	});
 
 

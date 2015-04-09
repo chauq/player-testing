@@ -40,7 +40,7 @@ describe('user profile', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[3]/div[1]/div/div[1]/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('Paul Robinson');
+                expect(promise).toEqual('Jānis Džeriņš');
                 console.log("Expected text is: " + promise); 
             });
 
@@ -72,7 +72,7 @@ describe('user profile', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="directive-two-col-feed"]/div[1]/a/div[2]/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('f24');
+                expect(promise).toEqual('Hail');
                 console.log("Expected text is: " + promise); 
             });
 

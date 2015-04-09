@@ -66,13 +66,20 @@ describe('search', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="stations-container"]/div/div[2]/div/div[1]/div[1]')).getText().
 			then(function(promise){
-            expect(promise).toEqual('BBC News');
+            expect(promise).toEqual('BBC Arabic');
             console.log("Expected text is: " + promise); 
         });
 	});
 
 	it('should be able to logout of the website', function() {
-		var logout = require('./logout');
-	});
+		//var logout = require('./logout');
+		var avatar = element(by.id('top_menu_avatar'));
+		var logout = element(by.id('top-drop-logout'));
 
+		browser.driver.manage().window().maximize();
+
+		avatar.click();
+		logout.click();
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/intro');
+	});
 }); 

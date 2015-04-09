@@ -93,12 +93,12 @@ describe('lsng home', function() {
 
 		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com//bbc_world/8d889d9c-de66-4c82-b9c9-54dcf70dc031');
 
-		var feeds = element.all(by.repeater('feed in feeds'));
+		/*var feeds = element.all(by.repeater('feed in feeds'));
 
 		feeds.first().then(function(elm){
 			elm.click();
 		});
-	
+		*/
 	});
 
 	it('should be able to logout of the website', function() {
