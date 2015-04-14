@@ -77,14 +77,14 @@ describe('lsng home', function() {
 		home.click();
 		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/home');
 	});
-
+/*
 	it('should be able to click on the explore trending button and go to the trending page', function() {
 		var explore = element(by.id('btn_feed_explore_trending'));
 
 		explore.click();
 		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/trending');
 	});
-
+*/
 	it('should be able to click on the BBC button and go to the BBC page', function() {
 		//browser.driver.findElement(by.css('.feed_img')).get(2).click();
 		var bbc = element.all(by.css('.feed_text_holder')).get(1);

@@ -18,7 +18,7 @@ describe('search', function() {
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
 	});
-
+/*
 	it('should be able to search from intro page', function() {
 		var search = element(by.id('search_txt'));
 
@@ -52,6 +52,8 @@ describe('search', function() {
             console.log("Expected text is: " + promise); 
         });
 	});
+
+*/
 
 	it('should be able to search from stations page', function() {
 		browser.get('http://staging.lsng.livestation.com/stations'); 
