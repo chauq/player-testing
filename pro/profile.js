@@ -25,7 +25,7 @@ describe('user profile', function() {
 		var avatar = browser.driver.findElement(by.xpath('//*[@id="top_menu_avatar"]/img'))
 		var profile = element(by.id('top-drop-my-profile'));
 
-		browser.driver.manage().window().maximize();
+		//browser.driver.manage().window().maximize();
 		avatar.click();
 		profile.click();
 

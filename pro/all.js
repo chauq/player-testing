@@ -4,7 +4,7 @@ exports.config = {
   multiCapabilities: [/*{
     browserName: 'firefox'
   }, */{
-    browserName: 'safari'
+    browserName: 'safari',
   }, {
     browserName: 'chrome'
   }]

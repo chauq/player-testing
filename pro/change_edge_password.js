@@ -24,7 +24,7 @@ describe('changePW/edge password login', function() {
 		var edit = element(by.id('top-drop-edit-profile'));
 		var title = element(by.css('.regHead'));
 
-		browser.driver.manage().window().maximize();
+		//browser.driver.manage().window().maximize();
 		avatar.click();
 		edit.click();
 

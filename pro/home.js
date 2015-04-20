@@ -22,7 +22,7 @@ describe('lsng home', function() {
 	it('should be able to see the a station', function() {
 		var bbc = element.all(by.css('.feed_text_holder')).get(1);
 
-		expect(bbc.getText()).toEqual("Untitled Broadcast\nby euronews Arabic\nLive");
+		expect(bbc.getText()).toEqual("Untitled Broadcast\nby France 24 English\nLIVE");
 	});
 
 	it('should be able to scroll down the home page', function() {
@@ -87,11 +87,12 @@ describe('lsng home', function() {
 */
 	it('should be able to click on the BBC button and go to the BBC page', function() {
 		//browser.driver.findElement(by.css('.feed_img')).get(2).click();
-		var bbc = element.all(by.css('.feed_text_holder')).get(1);
+		//var bbc = element.all(by.css('.feed_text_holder')).get(1);
+		var bbc = browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[4]/a/div/div'))
 
 		bbc.click();
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com//bbc_world/8d889d9c-de66-4c82-b9c9-54dcf70dc031');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/bbc_world/6d6bafd8-1e3d-4200-8859-2f16ece887b5');
 
 		/*var feeds = element.all(by.repeater('feed in feeds'));
 
@@ -105,7 +106,7 @@ describe('lsng home', function() {
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
-		browser.driver.manage().window().maximize();
+		//browser.driver.manage().window().maximize();
 
 		avatar.click();
 		logout.click();

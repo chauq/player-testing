@@ -5,8 +5,8 @@ exports.config = {
   //safari
   specs: ['spec.js','login_buttons.js', 'edge_username_login.js', 'home.js', 
   		  'search.js', 'profile.js', 'video.js', 'about_livestation.js', 'lsng_login.js', 
-        'test_logout.js', 'test_config.js', 'test_config_fr.js', 'test_config_gb.js', '404.js'],
-  //'change_edge_password.js', 'channel.js'
+        'test_logout.js', 'test_config.js', 'test_config_fr.js', 'test_config_gb.js'],
+  //'change_edge_password.js', 'channel.js', '404.js'
   capabilities: {
     browserName: 'chrome'
   }
