@@ -59,12 +59,14 @@ describe('search', function() {
 		browser.get('http://staging.lsng.livestation.com/stations'); 
 		
 		var search = element(by.id('search_txt'));
+		
+		browser.sleep(10000);
 
 		search.click();
 		search.sendKeys('bbc');
 		search.sendKeys(protractor.Key.ENTER);
-		search.sendKeys(protractor.Key.ENTER);
-		//browser.sleep(10000);
+		//search.sendKeys(protractor.Key.ENTER);
+		browser.sleep(10000);
 
 		browser.driver.findElement(by.xpath('//*[@id="stations-container"]/div/div[2]/div/div[1]/div[1]')).getText().
 			then(function(promise){
