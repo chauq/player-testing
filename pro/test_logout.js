@@ -45,6 +45,8 @@ describe('lsng logout test', function() {
 
 		browser.get('http://staging.lsng.livestation.com/stations'); 
 
+		browser.sleep(5000);
+
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
@@ -76,6 +78,8 @@ describe('lsng logout test', function() {
 
 		browser.get('http://staging.lsng.livestation.com/station/Ash'); 
 
+		browser.sleep(5000);
+
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
@@ -105,7 +109,9 @@ describe('lsng logout test', function() {
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
 
-		browser.get('http://staging.lsng.livestation.com/station/france24_english/abf214bc-3fcc-4189-8440-52d2a85083c7'); 
+		browser.get('http://staging.lsng.livestation.com/station/france24_english/abf214bc-3fcc-4189-8440-52d2a85083c7');
+
+		browser.sleep(5000); 
 
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
@@ -138,6 +144,8 @@ describe('lsng logout test', function() {
 
 		browser.get('http://staging.lsng.livestation.com/profile'); 
 
+		browser.sleep(5000);
+
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
@@ -169,6 +177,8 @@ describe('lsng logout test', function() {
 
 		browser.get('http://staging.lsng.livestation.com/station/sky_news_international'); 
 
+		browser.sleep(5000);
+
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
 
@@ -198,7 +208,9 @@ describe('lsng logout test', function() {
 
 		expect(welcome.getText()).toEqual('Welcome back quang');
 
-		browser.get('http://staging.lsng.livestation.com/station/Ash/bb50dd05-3bbd-4d86-b65f-acc5112e8a36'); 
+		browser.get('http://staging.lsng.livestation.com/station/Ash/bb50dd05-3bbd-4d86-b65f-acc5112e8a36');
+
+		browser.sleep(5000); 
 
 		var avatar = element(by.id('top_menu_avatar'));
 		var logout = element(by.id('top-drop-logout'));
