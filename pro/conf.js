@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  //'flaging.js', 'trending.js', 'guest_users.js', 'edit_profile.js', 'nav_buttons.js', 'join_exist.js', 
+  //'flaging.js', 'trending.js', 'edit_profile.js', 'nav_buttons.js', 'join_exist.js', 
   //'offline.js'
   //safari
   specs: ['spec.js','login_buttons.js', 'edge_username_login.js',  
