@@ -1,6 +1,6 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['test_logout.js'],
+  specs: ['guest_users.js'],
   capabilities: {
     browserName: 'chrome'
   }

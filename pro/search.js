@@ -70,7 +70,7 @@ describe('search', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="stations-container"]/div/div[2]/div/div[1]/div[1]')).getText().
 			then(function(promise){
-            expect(promise).toEqual('BBC Arabic');
+            expect(promise).toEqual('BBC News');
             console.log("Expected text is: " + promise); 
         });
 	});

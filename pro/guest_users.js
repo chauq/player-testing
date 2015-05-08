@@ -19,7 +19,7 @@ describe('Guest users', function() {
 	it('should let the guest user in the stations page', function() {
 		browser.get('http://staging.lsng.livestation.com/stations');
 
-		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/stations');
+		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/stations/');
 	});
 
 	it('should show the option to log in or sign up on the stations page', function() {
