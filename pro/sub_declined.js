@@ -55,7 +55,7 @@ describe('Sub declined message', function() {
 	});
 
 	it('The payement should fail and tell you why', function() {
-		browser.sleep(15000);
+		browser.sleep(20000);
 
 		browser.driver.findElement(by.xpath('//*[@id="subscribe-info-modal"]/div[2]/div/div/div/div/div[1]')).getText().
 			then(function(promise){
