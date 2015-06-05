@@ -3,7 +3,7 @@ describe('lsng login social', function() {
 	it('should be able to show the login popup title', function() {
 		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.login_txt a'));
+		var login = element(by.id('btn-intro-login'));
 		var title = element(by.css('.modal h1'));
 
 		login.click();
@@ -14,7 +14,7 @@ describe('lsng login social', function() {
 	it('should be able to log in as a facebook user', function() {
 		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.login_txt a'));
+		var login = element(by.id('btn-intro-login'));
 		//var fbLogin = browser.driver.findElement(by.xpath('//*[@id="btn-modal-login-fb"]/img'))
 		var fbLogin = element(by.id('btn-modal-login-fb'));
 		var fbusername = element(by.id('email'));
@@ -45,7 +45,7 @@ describe('lsng login social', function() {
 	it('should be able to log in as a Twitter user', function() {
 		browser.get('http://staging.lsng.livestation.com/#/intro'); 
 
-		var login = element(by.css('.login_txt a'));
+		var login = element(by.id('btn-intro-login'));
 		var twitterLogin = browser.driver.findElement(by.xpath('//*[@id="btn-modal-login-twitter"]/img'))
 		var welcome = element(by.css('.welcome_text'));
 

@@ -3,15 +3,15 @@ describe('lsng home', function() {
 	it('should be able to log in as a user using username', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('123123');
 		done.click();
@@ -30,7 +30,7 @@ describe('lsng home', function() {
         	arguments[0].scrollIntoView();
     	}
 
-    	browser.executeScript(scrollIntoView, browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[35]/a/div/div[1]')));
+    	browser.executeScript(scrollIntoView, browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[11]/a/div/div[1]')));
 
     	//check if top bar is still here by clicking the home icon
     	var home = element(by.id('home-icon'));
@@ -86,6 +86,7 @@ describe('lsng home', function() {
 	});
 */
 	it('should be able to click on the BBC button and go to the BBC page', function() {
+		browser.sleep(20000);
 		//browser.driver.findElement(by.css('.feed_img')).get(2).click();
 		//var bbc = element.all(by.css('.feed_text_holder')).get(1);
 		var bbc = browser.driver.findElement(by.xpath('//*[@id="feeds-container"]/div[4]/a/div/div'))

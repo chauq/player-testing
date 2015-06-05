@@ -9,6 +9,6 @@ exports.config = {
   //'change_edge_password.js', 'channel.js', '404.js', 'home.js', 
   //'sub_declined.js','sub_incorrect_cvc.js', 'sub_expired.js', 'sub_processing_error.js'
   capabilities: {
-    browserName: 'safari'
+    browserName: 'chrome'
   }
 }

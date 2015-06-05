@@ -5,15 +5,15 @@ describe('edge username login', function() {
 
 		browser.waitForAngular();
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		username.sendKeys('QuangChau');
 		password.sendKeys('123123');
 		done.click();
@@ -35,15 +35,15 @@ describe('edge username login', function() {
 	it('should be able to log in as a user using username, even if the username has a space in front of it', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		username.sendKeys(' quangchau');
 		password.sendKeys('123123');
 		done.click();
@@ -63,15 +63,15 @@ describe('edge username login', function() {
 	it('should be able to log in as a user using username, even if the username has a space in after of it', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		username.sendKeys('quangchau ');
 		password.sendKeys('123123');
 		done.click();

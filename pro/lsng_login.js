@@ -3,7 +3,7 @@ describe('lsng login', function() {
 	it('should be able to show the login popup title', function() {
 		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.login_txt a'));
+		var login = element(by.id('btn-intro-login'));
 		var title = element(by.css('.modal h1'));
 
 		login.click();
@@ -14,14 +14,14 @@ describe('lsng login', function() {
 	it('should be able to show a error message if user enters wrong login details', function() {
 		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		username.sendKeys('quang');
 		password.sendKeys('123456');
 		done.click();
@@ -32,15 +32,15 @@ describe('lsng login', function() {
 	it('should be able to log in as a user using username', function() {
 		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		username.sendKeys('quangchau');
 		password.sendKeys('123123');
 		done.click();

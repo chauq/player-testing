@@ -79,7 +79,7 @@
 			"file": "conf.js",
 			"settings":
 			{
-				"buffer_size": 561,
+				"buffer_size": 651,
 				"line_ending": "Unix"
 			}
 		},
@@ -87,31 +87,15 @@
 			"file": "test.js",
 			"settings":
 			{
-				"buffer_size": 148,
+				"buffer_size": 154,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "guest_users.js",
+			"file": "/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/support/env.rb",
 			"settings":
 			{
-				"buffer_size": 2311,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "test_logout.js",
-			"settings":
-			{
-				"buffer_size": 8188,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wingify.js",
-			"settings":
-			{
-				"buffer_size": 490,
+				"buffer_size": 1975,
 				"line_ending": "Unix"
 			}
 		}
@@ -140,12 +124,23 @@
 	},
 	"file_history":
 	[
+		"/Users/mikeo/fork/appium/features/support/env.rb",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_app_settings.featurewip",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/about_livestation.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/home.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/sub_incorrect_cvc.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/sub_declined.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/sub_processing_error.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/sub_expired.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/test.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/text.txt",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/guest_users.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/test_logout.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/wingify.js",
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/search.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/Android.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/spec.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/all.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/search.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/test_logout.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/home.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/logout.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/lsng_login.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/lsng_login_social.js",
@@ -153,7 +148,6 @@
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/premium_message.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/profile.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/video.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/about_livestation.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/bottom_menu.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/change_edge_password.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/channel.js",
@@ -188,7 +182,6 @@
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/production/lsng_login.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/production/404.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/production/flaging.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/test.js",
 		"/Users/mikeo/Downloads/gradle-2.3/bin/gradle.bat",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/404.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/test_config.js",
@@ -210,10 +203,8 @@
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/pw_reset.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/trending.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/manual/empty_feed.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/guest_users.js",
 		"/Users/mikeo/fork/diagnostic-player/index.html",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/untitled",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_app_settings.featurewip",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_change_login_details.featurewip",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_edit_profile.featurewip",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_login.feature",
@@ -235,7 +226,6 @@
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/OS_vod_overlays.feature",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/manual/iOS_broadcast_skip_photo",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/manual/lsng_login_social.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/wingify.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/reset.rb",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/pro/google.js",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/iOS_password_reset.feature",
@@ -261,13 +251,7 @@
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/step_definitions/web_intro_steps.coffee",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/step_definitions/web_login_steps.coffee",
 		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/step_definition/iOS_pre_live_steps.rb",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/support/world.coffee",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/cucumberConf.js",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/web_login.feature",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/angular-cucumber-example/features/step_definitions/web_login_steps.coffee",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/TuteCumber/models/calc.coffee",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/step_definitions/myStepDefinitions.coffee",
-		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/web_intro.feature"
+		"/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/js/features/support/world.coffee"
 	],
 	"find":
 	{
@@ -291,6 +275,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"%20",
+			"1000",
 			"browser.driver.manage().window().maximize();",
 			"http://wwww.livestation.com/",
 			"123123",
@@ -337,15 +323,16 @@
 		"regex": false,
 		"replace_history":
 		[
+			" ",
 			"//browser.driver.manage().window().maximize();",
 			"http://www.livestation.com/",
 			"cologi37",
 			"http://wwww.livestation.com",
 			"http://www.livestation.com/intro",
 			"btn-intro-login",
-			"//emailLogin.click();",
-			"//var emailLogin = element(by.id('btn-modal-login-email'));",
-			"var login = element(by.css('.login_txt a'));",
+			"emailLogin.click();",
+			"var emailLogin = element(by.css('.login_email_txt a'));",
+			"var login = element(by.id('btn-intro-login'));",
 			"top_menu_avatar",
 			"top-menu-avatar",
 			"btn-intro-login",
@@ -366,7 +353,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -374,15 +361,15 @@
 					"file": "conf.js",
 					"settings":
 					{
-						"buffer_size": 561,
+						"buffer_size": 651,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								561,
-								561
+								651,
+								651
 							]
 						],
 						"settings":
@@ -402,15 +389,15 @@
 					"file": "test.js",
 					"settings":
 					{
-						"buffer_size": 148,
+						"buffer_size": 154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								98,
-								98
+								152,
+								152
 							]
 						],
 						"settings":
@@ -425,77 +412,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "guest_users.js",
+					"file": "/Users/mikeo/Documents/work/Livestation/source/git/lsng-qa/lsng-ios-appium/features/support/env.rb",
 					"settings":
 					{
-						"buffer_size": 2311,
+						"buffer_size": 1975,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								973,
-								973
+								180,
+								180
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "test_logout.js",
-					"settings":
-					{
-						"buffer_size": 8188,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1035.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wingify.js",
-					"settings":
-					{
-						"buffer_size": 490,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								481,
-								481
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,

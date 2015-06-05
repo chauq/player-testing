@@ -3,15 +3,15 @@ describe('Sort the stations', function() {
 	it('should be able to log in as a user using username', function() {
 		browser.get('http://lsng.livestation.com'); 
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		username.sendKeys('quang.chau');
 		password.sendKeys('1');
 		done.click();

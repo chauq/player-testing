@@ -3,14 +3,15 @@ describe('test configuration fr', function() {
 	it('should be able to login as developers_fr', function() {
 		browser.get('http://staging.lsng.livestation.com/'); 
 
-		var login = element(by.css('.login_txt a'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var username = element(by.id('login_email_input'));
 		var password = element(by.id('login_password_input'));
 		var done = element(by.id('btn-modal-login-email-done'));
 		var welcome = element(by.css('.welcome_text'));
 
 		login.click();
-		browser.sleep(5000)
+		emailLogin.click();
 		username.sendKeys('developers_fr');
 		password.sendKeys('developers_fr');
 		done.click();

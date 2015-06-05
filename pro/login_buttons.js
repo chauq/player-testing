@@ -20,7 +20,7 @@ describe('login buttons', function() {
   it('should be able to close the login box to go back to the home page', function() {
     browser.get('http://staging.lsng.livestation.com/'); 
 
-    var login = element(by.css('.login_txt a'));
+    var login = element(by.id('btn-intro-login'));
 
     login.click();
     //browser.sleep(1000);
@@ -32,11 +32,11 @@ describe('login buttons', function() {
    it('should be able to close the login box, after going to the email login box. It should then to go back to the home page', function() {
     browser.get('http://staging.lsng.livestation.com/'); 
 
-    var login = element(by.css('.login_txt a'));
-    //var emailLogin = element(by.id('btn-modal-login-email'));
+    var login = element(by.id('btn-intro-login'));
+    var emailLogin = element(by.css('.login_email_txt a'));
 
     login.click();
-    //emailLogin.click();
+    emailLogin.click();
     //browser.sleep(1000);
     browser.driver.findElement(by.id('btn-modal-close')).click();
 

@@ -3,12 +3,12 @@ describe('password reset', function() {
 	it('should be able to show a password reset pop up', function() {
 		browser.get('http://staging.lsng.livestation.com/intro'); 
 
-		var login = element(by.css('.login_txt a'));
-		//var emailLogin = element(by.id('btn-modal-login-email'));
+		var login = element(by.id('btn-intro-login'));
+		var emailLogin = element(by.css('.login_email_txt a'));
 		var forgotten = element(by.id('forgotten_image'));
 
 		login.click();
-		//emailLogin.click();
+		emailLogin.click();
 		forgotten.click();
 	});
 
