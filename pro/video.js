@@ -21,6 +21,8 @@ describe('Video page', function() {
 
 	it('should be able to go to the test station page by going to a link', function() {
 		browser.get('http://staging.lsng.livestation.com/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
+		browser.sleep(5000);
+		browser.waitForAngular;
 
 		expect(browser.getCurrentUrl()).toEqual('http://staging.lsng.livestation.com/quangchau/71194604-2e3c-436b-8a93-f5294ae91a8b');
 	});

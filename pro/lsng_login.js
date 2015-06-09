@@ -8,7 +8,7 @@ describe('lsng login', function() {
 
 		login.click();
 
-		expect(title.getText()).toEqual('Log in');
+		expect(title.getText()).toEqual('Sign in');
 	});
 
 	it('should be able to show a error message if user enters wrong login details', function() {

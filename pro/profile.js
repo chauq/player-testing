@@ -40,7 +40,7 @@ describe('user profile', function() {
 
 		browser.driver.findElement(by.xpath('//*[@id="profile_right_col"]/div[3]/div[1]/div/div[1]/div[1]')).getText().
 			    then(function(promise){
-                expect(promise).toEqual('Jānis Džeriņš');
+                expect(promise).toEqual('tamim mourad');
                 console.log("Expected text is: " + promise); 
             });
 
